@@ -25,19 +25,20 @@ class CustomDrawer extends StatelessWidget {
         ),
         DrawerItemListView(),
         SliverFillRemaining(
+            hasScrollBody: false,
             child: Column(children: [
-          Expanded(child: SizedBox()),
-          InActiveDrawerItem(
-              drawerItemModel: DrawerItemModel(
-                  image: Assets.imagesSettings, title: 'Settings')),
-          InActiveDrawerItem(
-            drawerItemModel: DrawerItemModel(
-              image: Assets.imagesLogout,
-              title: 'Logout account',
-            ),
-          ),
-          SizedBox(height: 48),
-        ])),
+              Expanded(child: SizedBox()),
+              InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                      image: Assets.imagesSettings, title: 'Settings')),
+              InActiveDrawerItem(
+                drawerItemModel: DrawerItemModel(
+                  image: Assets.imagesLogout,
+                  title: 'Logout account',
+                ),
+              ),
+              SizedBox(height: 48),
+            ])),
       ]),
     );
   }
