@@ -15,8 +15,17 @@ class AllEpensessiveItemHeader extends StatelessWidget {
             color: Color(0xFFFAFAFA),
             shape: OvalBorder(),
           ),
-          child: SvgPicture.asset(image),
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: SvgPicture.asset(image),
+          ),
         ),
+        const Spacer(),
+        Transform.rotate(
+          angle: -157079633 * 2,
+          child: const Icon(Icons.arrow_back_ios_new_outlined,
+              color: Color(0xFF064061)),
+        )
       ],
     );
   }
