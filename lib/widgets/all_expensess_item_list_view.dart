@@ -3,9 +3,16 @@ import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/all_expensses_item.dart';
 
-class AllExpensessItemListView extends StatelessWidget {
+class AllExpensessItemListView extends StatefulWidget {
   const AllExpensessItemListView({super.key});
-  static const items = [
+
+  @override
+  State<AllExpensessItemListView> createState() =>
+      _AllExpensessItemListViewState();
+}
+
+class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
+  final items = const [
     AllExpensessItemModel(
         image: Assets.imagesBalance,
         date: 'April 2022',
@@ -22,6 +29,8 @@ class AllExpensessItemListView extends StatelessWidget {
         title: 'Expenses',
         price: r'$20,129'),
   ];
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -34,19 +43,37 @@ class AllExpensessItemListView extends StatelessWidget {
 
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpenssesItem(
-                itemModel: item,
-                isSelected: false,
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpenssesItem(
+                  itemModel: item,
+                  isSelected: selectedIndex == index,
+                ),
               ),
             ),
           );
         } else {
           return Expanded(
-              child: AllExpenssesItem(itemModel: item, isSelected: false));
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: AllExpenssesItem(
+                  itemModel: item, isSelected: selectedIndex == index),
+            ),
+          );
         }
       }).toList(),
     );
+  }
+
+  void updateIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
