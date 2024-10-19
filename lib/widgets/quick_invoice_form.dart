@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/custom_button.dart';
 import 'package:responsive_dash_board/widgets/tilte_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -32,6 +33,11 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
+        Row(
+          children: [
+            Expanded(child: CustomButton()),
+          ],
+        )
       ],
     );
   }
