@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_header.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_list_view.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});
@@ -14,31 +16,7 @@ class TransactionHistory extends StatelessWidget {
           height: 20,
         ),
         Text('13 April 2022', style: AppStyles.styleMedium16),
-      ],
-    );
-  }
-}
-
-class TransactionHistoryHeader extends StatelessWidget {
-  const TransactionHistoryHeader({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Transaction history',
-          style: AppStyles.styleSemiBold20,
-        ),
-        Text(
-          'See All',
-          style: AppStyles.styleMedium16.copyWith(
-            color: const Color(0xFF4EB7F2),
-          ),
-        ),
+        const TransactionHistoryListView()
       ],
     );
   }

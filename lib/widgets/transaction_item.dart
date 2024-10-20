@@ -14,7 +14,8 @@ class TransactionItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           transactionModel.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16
+              .copyWith(color: const Color(0xFFAAAAAA)),
         ),
         subtitle: Text(transactionModel.data, style: AppStyles.styleRegular16),
         trailing: Text(transactionModel.amount,
