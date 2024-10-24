@@ -10,17 +10,18 @@ class Income extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackground(
-        child: Column(children: [
-      IncomeSectioHeader(),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: IncomeChart()),
-            Expanded(child: IncomeDetalis())
-          ],
-        ),
-      )
-    ]));
+      child: Column(
+        children: [
+          IncomeSectioHeader(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeDetalis())
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
