@@ -7,15 +7,35 @@ class ItemDetails extends StatelessWidget {
   final ItemDetailsModel itemdetailsModel;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        width: 12,
-        height: 12,
-        decoration: ShapeDecoration(
-            color: itemdetailsModel.color, shape: const OvalBorder()),
+    return Padding(
+      padding: const EdgeInsets.only(left: 16.0),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Row(
+          children: [
+            Container(
+              width: 12,
+              height: 12,
+              decoration: ShapeDecoration(
+                  color: itemdetailsModel.color, shape: const OvalBorder()),
+            ),
+            const SizedBox(width: 12),
+            Text(itemdetailsModel.title, style: AppStyles.styleRegular16),
+            const SizedBox(width: 24),
+            Text(itemdetailsModel.value, style: AppStyles.styleMedium16),
+          ],
+        ),
       ),
-      title: Text(itemdetailsModel.title, style: AppStyles.styleRegular16),
-      trailing: Text(itemdetailsModel.value, style: AppStyles.styleMedium16),
     );
+    // return ListTile(
+    //   leading: Container(
+    //     width: 12,
+    //     height: 12,
+    //     decoration: ShapeDecoration(
+    //         color: itemdetailsModel.color, shape: const OvalBorder()),
+    //   ),
+    //   title: Text(itemdetailsModel.title, style: AppStyles.styleRegular16),
+    //   trailing: Text(itemdetailsModel.value, style: AppStyles.styleMedium16),
+    // );
   }
 }
