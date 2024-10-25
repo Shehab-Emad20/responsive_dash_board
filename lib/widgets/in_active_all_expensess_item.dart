@@ -28,24 +28,36 @@ class InActiveAllExpensessItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllEpensessiveItemHeader(image: itemModel.image),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleMedium16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -70,7 +82,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1,
-            color: Color(0xFFF1F1F1),
+            color: Color(0xFF4DB7F2),
           ),
         ),
       ),
@@ -87,23 +99,32 @@ class ActiveAllExpensessItem extends StatelessWidget {
             style: AppStyles.styleSemiBold16(context),
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleMedium16(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleMedium16(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: const Color(0xFFFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0xFFFAFAFA)),
+            ),
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
