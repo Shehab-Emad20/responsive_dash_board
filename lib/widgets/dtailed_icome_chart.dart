@@ -32,7 +32,7 @@ class _DtailedIcomeChart extends State<DtailedIcomeChart> {
               titlePositionPercentageOffset: activIndex == 0 ? 1.5 : null,
               title: activIndex == 0 ? 'Design service' : '40%',
               value: 40,
-              titleStyle: AppStyles.styleMedium16.copyWith(
+              titleStyle: AppStyles.styleMedium16(context).copyWith(
                 color: activIndex == 0 ? null : Colors.white,
               ),
               radius: activIndex == 1 ? 60 : 50,
@@ -41,7 +41,7 @@ class _DtailedIcomeChart extends State<DtailedIcomeChart> {
               titlePositionPercentageOffset: activIndex == 1 ? 2.2 : null,
               radius: activIndex == 1 ? 60 : 50,
               value: 25,
-              titleStyle: AppStyles.styleMedium16.copyWith(
+              titleStyle: AppStyles.styleMedium16(context).copyWith(
                 color: activIndex == 2 ? null : Colors.white,
               ),
               title: activIndex == 1 ? 'Design Product' : '25%',
@@ -50,7 +50,7 @@ class _DtailedIcomeChart extends State<DtailedIcomeChart> {
               titlePositionPercentageOffset: activIndex == 2 ? 1.4 : null,
               radius: activIndex == 2 ? 60 : 50,
               value: 20,
-              titleStyle: AppStyles.styleMedium16.copyWith(
+              titleStyle: AppStyles.styleMedium16(context).copyWith(
                 color: activIndex == 3 ? null : Colors.white,
               ),
               title: activIndex == 2 ? 'Product royalti' : '20%',
@@ -59,7 +59,7 @@ class _DtailedIcomeChart extends State<DtailedIcomeChart> {
               titlePositionPercentageOffset: activIndex == 3 ? 1.4 : null,
               radius: activIndex == 3 ? 60 : 50,
               value: 22,
-              titleStyle: AppStyles.styleMedium16.copyWith(
+              titleStyle: AppStyles.styleMedium16(context).copyWith(
                 color: activIndex == 4 ? null : Colors.white,
               ),
               title: activIndex == 3 ? 'other' : '22%',
