@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class SizeConfig {
   static const double desktop = 1200;
@@ -6,7 +6,7 @@ class SizeConfig {
 
   static late double width, height;
 
-  static init(BuildContext, context) {
+  static init(BuildContext context) {
     height = MediaQuery.sizeOf(context).height;
     width = MediaQuery.sizeOf(context).width;
   }

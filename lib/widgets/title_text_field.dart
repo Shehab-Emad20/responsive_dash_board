@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_text_field.dart';
 
-class TilteTextField extends StatelessWidget {
-  const TilteTextField({super.key, required this.title, required this.hint});
+class TitleTextField extends StatelessWidget {
+  const TitleTextField({super.key, required this.title, required this.hint});
+
   final String title, hint;
   @override
   Widget build(BuildContext context) {
@@ -14,10 +15,12 @@ class TilteTextField extends StatelessWidget {
           'Customer name',
           style: AppStyles.styleMedium16(context),
         ),
-        const SizedBox(height: 12),
-        const CustomTextField(
-          hint: 'Enter customer name',
-        )
+        const SizedBox(
+          height: 12,
+        ),
+        CustomTextField(
+          hint: hint,
+        ),
       ],
     );
   }

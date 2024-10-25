@@ -5,22 +5,20 @@ import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
 class LatestTransctionListView extends StatelessWidget {
   const LatestTransctionListView({super.key});
+
   static const items = [
     UserInfoModel(
-      image: Assets.imagesAvatar1,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniandi@gmail.com',
-    ),
+        image: Assets.imagesAvatar1,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
     UserInfoModel(
-      image: Assets.imagesAvatar2,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniandi@gmail.com',
-    ),
+        image: Assets.imagesAvatar2,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
     UserInfoModel(
-      image: Assets.imagesAvatar3,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniandi@gmail.com',
-    ),
+        image: Assets.imagesAvatar3,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,6 @@ class LatestTransctionListView extends StatelessWidget {
             .toList(),
       ),
     );
-
     // return SizedBox(
     //   height: 80,
     //   child: ListView.builder(

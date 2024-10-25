@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_and_quick_invoice_section.dart';
-import 'package:responsive_dash_board/widgets/income.dart';
-import 'package:responsive_dash_board/widgets/my_cards_transaction_histroy_section.dart';
+import 'package:responsive_dash_board/widgets/all_expensess_and_quick_invoice_section.dart';
+import 'package:responsive_dash_board/widgets/income_section.dart';
+import 'package:responsive_dash_board/widgets/my_cards_and_transction_history_section.dart';
 
 class DashBoardMobileLayout extends StatelessWidget {
   const DashBoardMobileLayout({
@@ -13,11 +13,15 @@ class DashBoardMobileLayout extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          AllExpensesAndQuickInvoiceSection(),
-          SizedBox(height: 24),
-          MyCardsTransactionHistroySection(),
-          SizedBox(height: 24),
-          Income(),
+          AllExpensessAndQuickInvoiceSection(),
+          SizedBox(
+            height: 24,
+          ),
+          MyCardsAndTransctionHistorySection(),
+          SizedBox(
+            height: 24,
+          ),
+          IncomeSection(),
         ],
       ),
     );

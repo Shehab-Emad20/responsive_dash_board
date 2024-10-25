@@ -1,9 +1,9 @@
 class AllExpensessItemModel {
-  final String title, image, date, price;
+  final String image, title, date, price;
 
   const AllExpensessItemModel(
-      {required this.title,
-      required this.image,
+      {required this.image,
+      required this.title,
       required this.date,
       required this.price});
 }

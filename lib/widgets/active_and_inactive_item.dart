@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class InActiveDrawerItem extends StatelessWidget {
   const InActiveDrawerItem({
@@ -16,11 +17,11 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
       title: FittedBox(
-        fit: BoxFit.scaleDown,
         alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
         child: Text(
           drawerItemModel.title,
-          style: AppStyles.styleRegular16(context),
+          style: AppStyles.styleMedium16(context),
         ),
       ),
     );
@@ -45,9 +46,7 @@ class ActiveDrawerItem extends StatelessWidget {
       ),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(
-          color: Color(0xFF4EB7F2),
-        ),
+        decoration: const BoxDecoration(color: Color(0xFF4EB7F2)),
       ),
     );
   }

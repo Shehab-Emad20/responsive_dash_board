@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
-import 'package:responsive_dash_board/widgets/range_option.dart';
+import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/range_options.dart';
 
 class AllExpensessHeader extends StatelessWidget {
   const AllExpensessHeader({super.key});
@@ -13,8 +14,10 @@ class AllExpensessHeader extends StatelessWidget {
           'All Expenses',
           style: AppStyles.styleSemiBold20(context),
         ),
-        const Expanded(child: SizedBox()),
-        const RangeOption(),
+        const Expanded(
+          child: SizedBox(),
+        ),
+        const RangeOptions(),
       ],
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ItemDetailsModel {
-  final String title, value;
   final Color color;
+  final String title, value;
 
   const ItemDetailsModel(
-      {required this.title, required this.value, required this.color});
+      {required this.color, required this.title, required this.value});
 }

@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/dots_indicator.dart';
 import 'package:responsive_dash_board/widgets/my_cards_page_view.dart';
 
-class MyCardSection extends StatefulWidget {
-  const MyCardSection({super.key});
+class MyCardsSection extends StatefulWidget {
+  const MyCardsSection({super.key});
 
   @override
-  State<MyCardSection> createState() => _MyCardSectionState();
+  State<MyCardsSection> createState() => _MyCardsSectionState();
 }
 
-class _MyCardSectionState extends State<MyCardSection> {
+class _MyCardsSectionState extends State<MyCardsSection> {
   late PageController pageController;
-  int currentpageIndex = 0;
+  int currentPageIndex = 0;
+
   @override
   void initState() {
     pageController = PageController();
+
     pageController.addListener(() {
-      currentpageIndex = pageController.page!.round();
+      currentPageIndex = pageController.page!.round();
       setState(() {});
     });
+    // TODO: implement initState
     super.initState();
   }
 
@@ -28,12 +31,12 @@ class _MyCardSectionState extends State<MyCardSection> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
+        SizedBox(
           width: 420,
-        ),
-        Text(
-          'My Card',
-          style: AppStyles.styleSemiBold20(context),
+          child: Text(
+            'My card',
+            style: AppStyles.styleSemiBold20(context),
+          ),
         ),
         const SizedBox(
           height: 20,
@@ -45,8 +48,8 @@ class _MyCardSectionState extends State<MyCardSection> {
           height: 20,
         ),
         DotsIndicator(
-          currentPageIndex: currentpageIndex,
-        )
+          currentPageIndex: currentPageIndex,
+        ),
       ],
     );
   }

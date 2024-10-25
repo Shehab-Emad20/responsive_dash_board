@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_button.dart';
-import 'package:responsive_dash_board/widgets/tilte_text_field.dart';
+import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
   const QuickInvoiceForm({super.key});
@@ -12,37 +12,50 @@ class QuickInvoiceForm extends StatelessWidget {
         Row(
           children: [
             Expanded(
-                child: TilteTextField(
-                    title: 'Customer name', hint: 'Enter Customer name')),
-            SizedBox(width: 16),
+                child: TitleTextField(
+                    title: 'Customer name', hint: 'Type customer name')),
+            SizedBox(
+              width: 16,
+            ),
             Expanded(
-              child: TilteTextField(
-                  title: 'Customer Email', hint: 'Enter Customer Email'),
+              child: TitleTextField(
+                  title: 'Customer Email', hint: 'Type customer email'),
             ),
           ],
         ),
-        SizedBox(height: 24),
+        SizedBox(
+          height: 24,
+        ),
         Row(
           children: [
             Expanded(
-                child: TilteTextField(
-                    title: 'Item name', hint: 'Enter Customer name')),
-            SizedBox(width: 16),
+                child: TitleTextField(
+                    title: 'Item name', hint: 'Type customer name')),
+            SizedBox(
+              width: 16,
+            ),
             Expanded(
-              child: TilteTextField(title: 'Item mount', hint: 'USD'),
+              child: TitleTextField(title: 'Item mount', hint: 'USD'),
             ),
           ],
         ),
-        SizedBox(height: 24),
+        SizedBox(
+          height: 24,
+        ),
         Row(
           children: [
             Expanded(
-                child: CustomButton(
-              textColor: Color(0xFF4EB7F2),
-              backgroundColor: Colors.transparent,
-            )),
-            SizedBox(width: 24),
-            Expanded(child: CustomButton()),
+              child: CustomButton(
+                textColor: Color(0xFF4DB7F2),
+                backgourndColor: Colors.transparent,
+              ),
+            ),
+            SizedBox(
+              width: 24,
+            ),
+            Expanded(
+              child: CustomButton(),
+            ),
           ],
         )
       ],

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expensess.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice.dart';
 
-class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
-  const AllExpensesAndQuickInvoiceSection({
+class AllExpensessAndQuickInvoiceSection extends StatelessWidget {
+  const AllExpensessAndQuickInvoiceSection({
     super.key,
   });
 
@@ -15,7 +15,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        QuickInvoice()
+        QuickInvoice(),
       ],
     );
   }

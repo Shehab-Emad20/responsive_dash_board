@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
-import 'package:responsive_dash_board/widgets/all_expensses_item.dart';
+import 'package:responsive_dash_board/widgets/all_expenssess_item.dart';
 
-class AllExpensessItemListView extends StatefulWidget {
-  const AllExpensessItemListView({super.key});
+class AllExpensessItemsListView extends StatefulWidget {
+  const AllExpensessItemsListView({super.key});
 
   @override
-  State<AllExpensessItemListView> createState() =>
-      _AllExpensessItemListViewState();
+  State<AllExpensessItemsListView> createState() =>
+      _AllExpensessItemsListViewState();
 }
 
-class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
-  final items = const [
-    AllExpensessItemModel(
+class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
+  final items = [
+    const AllExpensessItemModel(
         image: Assets.imagesBalance,
-        date: 'April 2022',
         title: 'Balance',
+        date: 'April 2022',
         price: r'$20,129'),
-    AllExpensessItemModel(
+    const AllExpensessItemModel(
         image: Assets.imagesIncome,
-        date: 'April 2022',
         title: 'Income',
-        price: r'$20,129'),
-    AllExpensessItemModel(
-        image: Assets.imagesExpenses,
         date: 'April 2022',
+        price: r'$20,129'),
+    const AllExpensessItemModel(
+        image: Assets.imagesExpenses,
         title: 'Expenses',
+        date: 'April 2022',
         price: r'$20,129'),
   ];
-  int selectedIndex = 0;
 
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -40,44 +40,47 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
             onTap: () {
               updateIndex(0);
             },
-            child: AllExpenssesItem(
-              itemModel: items[0],
+            child: AllExpensessItem(
               isSelected: selectedIndex == 0,
+              itemModel: items[0],
             ),
           ),
         ),
-        const SizedBox(width: 8), // Space between items
+        const SizedBox(
+          width: 8,
+        ),
         Expanded(
           child: GestureDetector(
             onTap: () {
               updateIndex(1);
             },
-            child: AllExpenssesItem(
-              itemModel: items[1],
+            child: AllExpensessItem(
               isSelected: selectedIndex == 1,
+              itemModel: items[1],
             ),
           ),
         ),
-        const SizedBox(width: 8),
+        const SizedBox(
+          width: 8,
+        ),
         Expanded(
           child: GestureDetector(
             onTap: () {
               updateIndex(2);
             },
-            child: AllExpenssesItem(
-              itemModel: items[2],
+            child: AllExpensessItem(
               isSelected: selectedIndex == 2,
+              itemModel: items[2],
             ),
           ),
-        ),
+        )
       ],
     );
-
     // return Row(
+    //   // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),
     //   children: items.asMap().entries.map((e) {
     //     int index = e.key;
     //     var item = e.value;
-
     //     return Expanded(
     //       child: GestureDetector(
     //         onTap: () {
@@ -85,9 +88,9 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
     //         },
     //         child: Padding(
     //           padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-    //           child: AllExpenssesItem(
-    //             itemModel: item,
+    //           child: AllExpensessItem(
     //             isSelected: selectedIndex == index,
+    //             itemModel: item,
     //           ),
     //         ),
     //       ),

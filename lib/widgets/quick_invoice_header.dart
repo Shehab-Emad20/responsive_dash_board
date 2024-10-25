@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 
-class QuickInvoiceHdeder extends StatelessWidget {
-  const QuickInvoiceHdeder({super.key});
+class QuickInvoiceHeader extends StatelessWidget {
+  const QuickInvoiceHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,13 @@ class QuickInvoiceHdeder extends StatelessWidget {
           width: 48,
           height: 48,
           decoration: const ShapeDecoration(
+            color: Color(0xFFFAFAFA),
             shape: OvalBorder(),
-            color: Colors.white,
           ),
-          child: const Icon(Icons.add, color: Color(0xff4EB7F2)),
+          child: const Icon(
+            Icons.add,
+            color: Color(0xff4EB7F2),
+          ),
         )
       ],
     );
