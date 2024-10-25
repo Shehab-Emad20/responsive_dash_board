@@ -13,7 +13,11 @@ class IncomSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
     return width >= SizeConfig.desktop && width < 1750
-        ? const Expanded(child: DtailedIcomeChart())
+        ? const Expanded(
+            child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: DtailedIcomeChart(),
+          ))
         : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
